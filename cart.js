@@ -59,11 +59,11 @@ console.log(summedPrice);
 */
 
 //CODE HERE
-const calcFinalPrice (cartTotal couponValue tax) = {
+const calcFinalPrice (cartTotal,couponValue, tax) {
     var cartTotal = 16
     var couponValue = 0.20
     var tax = 0.06
-     cartTotal+tax = rey 
+     cartTotal+tax = rey
      rey - couponValue = green 
      return(${green})
 }
@@ -91,10 +91,10 @@ const calcFinalPrice (cartTotal couponValue tax) = {
 
 /*
     TEXT ANSWER HERE
-Product: Description or Picture of object
-Price: The price of the object rising by quantity
-Name: Name of the product
-Quantity: Number of the product
+Product: Description or Picture of object - type string
+Price: The price of the object rising by quantity - type number
+Name: Name of the product - type of string
+Quantity: Number of the product - type number
 */
 
 /*

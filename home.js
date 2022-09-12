@@ -53,11 +53,16 @@ const deliveryAreaZipCodes = [85205, 85204, 85203, 85213, 85206]
 
 //CODE HERE
 
-canWeDeliver = (zipCode) => {
-   console.log(`We can deliver.`)
-    
+function canWeDeliver (zipCode) {
+   for (let i = 0; i<deliveryAreaZipCodes.length; i++ )
+   if (zipCode ==== deliveryAreaZipCodes={i}) {
+    console.log('We can deliver')
+   } else  {
+    console.log('We cannot deliver')
+   }
 }
-canWeDeliver(deliveryAreaZipCodes.includes)
+
+
 
 /* 
     Problem 2 Continued
@@ -77,10 +82,16 @@ canWeDeliver(deliveryAreaZipCodes.includes)
 */
 
 // CODE HERE
-canWeDeliverTwo = (zipCode) => {
-    console.log(`We can deliver.`)
+function canWeDeliverTwo (zipCode) {
+    if (deliveryAreaZipCodes.inclide(zipCode) === true ){
+ 
+    console.log(`We can deliver.`)}
+    else  {
+     console.log('We cannot deliver.')
+    }
      
  }
+ 
  canWeDeliver(deliveryAreaZipCodes.includes)
  
 
@@ -118,8 +129,8 @@ const deals = [
 */
 
 //CODE HERE
-let titlez : '15% Off!'
-let results = titlez.replace('15%','10%')
+price[0].title = price[0].title.replace('15%','10%')
+
 
 
 /*
@@ -136,6 +147,6 @@ let results = titlez.replace('15%','10%')
 */
 
 //CODE HERE
-let descs : '   This deal lasts until the end of March! '
-let resultz = descs.replace('March','April')
+
+price[1].desc = price[1].descs.replace('March','April')
 descs.trim()

@@ -168,8 +168,11 @@ const grape = {
 
 // const filteredFood = foodArr.filter(/* CALLBACK HERE */)
 
+const filterCallBack = (food) => {
+    return food.tags.include('dessert')
 
-
+}
+const filterFood = foodArr.filter()
 //////////////////PROBLEM 5////////////////////
 /* 
     Now let's write a function that's a little
@@ -210,7 +213,15 @@ const grape = {
 */
 
 //CODE HERE
-
+ function filterByProperty(property,number,type) {
+    const filteredArray = foodArr.filter((food) => {
+        if ( type === "above") {
+            return food[property] > number
+        } else if (type === 'below')
+        return food[property] < number
+    })
+    return filteredArray
+ }
 
 /*
     Invoke the `filterByProperty` function passing
@@ -220,3 +231,6 @@ const grape = {
 */
 
 //CODE HERE
+
+console.log(filterByProperty('popularity',3,'below'))
+console.log(filterByProperty('price',3,'above'))

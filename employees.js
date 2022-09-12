@@ -17,16 +17,17 @@
     [NAME] works on [SHIFTS]
     Where NAME and SHIFTS reference the values
     stored on the object.
+
 */
 
 //CODE HERE
-// Employee = class Employee {
+// class Employee {
 //     constructor(name, shift){
-//         this.name: 'Kate';
-//         this.shift: ['Morning','Noon', 'Night'];
+//         this.name: name
+//         this.shift: shift
 //     }
 //     getSchedule() {
-//         return {this.name,this.shift};
+//         console.log(`${this.name} works on ${this.shift}`);
 //     }
 // }
 
@@ -42,15 +43,7 @@
 */
 
 //CODE HERE
-empOne =class Employee {
-    constructor(name, shift){
-        this.name ='Jess'
-        this.shift = ['Weekday Morning','Weekday afternoons'];
-    }
-    getSchedule() {
-        return {this.name,this.shift};
-    }
-}
+const empOne = new Employee('Jess', "weekday mornings",'weekday afternoons')
 
 /*
     Call the `getSchedule` method on the
@@ -58,6 +51,7 @@ empOne =class Employee {
 */
 
 //CODE HERE
+empOne.getSchedule()
 
 
 /*
@@ -73,7 +67,8 @@ empOne =class Employee {
 */
 
 //CODE HERE
-empTwo = {...empOne...Nick}
+const empTwo = {...empOne,name:'Nick'}
+console.log(empTwo)
 
 
 //////////////////PROBLEM 2////////////////////
@@ -100,7 +95,19 @@ empTwo = {...empOne...Nick}
 */
 
 //CODE HERE
-class Manager 
+class Manager  extends Employee {
+    constructor (name,shift,employees) {
+        super(name,shift)
+        this.employees = employees
+
+    }
+    getEmployee() {
+      console.log(`${this.name} manages ${this.employees}`)
+    }
+    addEmployee(emp) {
+        this.employees.push(emp)
+    }
+}
 
 /*
     Create a new instance of your class.
@@ -114,7 +121,7 @@ class Manager
 */
 
 //CODE HERE
-
+const manager = new Manager('Winston','weekday morngings,weekday afternoons',['Cece','Schmidt'])
 
 /*
     Call the `getEmployees` method on the
@@ -122,7 +129,7 @@ class Manager
 */
 
 //CODE HERE
-
+manager.getEmployee()
 /*
     Call the `addEmployee` method on the 
     `manager` object passing in the string 
@@ -130,7 +137,7 @@ class Manager
 */
 
 //CODE HERE 
-
+manager.addEmployee('Coach')
 /*
     Call the `getEmployees` method on the
     `manager` object again to confirm 
@@ -138,3 +145,4 @@ class Manager
 */
 
 //CODE HERE
+manager.getEmployee()
